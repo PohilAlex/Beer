@@ -1,11 +1,13 @@
 package com.example.beer.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class BeerStorage {
-    private Map<BottleType, Integer> storage = new HashMap<BottleType, Integer>();
+    private Map<BottleType, Integer> storage = new LinkedHashMap<BottleType, Integer>();
     private static BeerStorage instance;
 
     private BeerStorage() {
@@ -43,4 +45,14 @@ public class BeerStorage {
     public void clear() {
         storage.clear();
     }
+
+    public ArrayList<ReportItem> getReportList() {
+        ArrayList<ReportItem> report = new ArrayList<ReportItem>();
+        for (BottleType type : storage.keySet()) {
+            ReportItem item = new ReportItem(type, storage.get(type));
+            report.add(item);
+        }
+        return report;
+    }
+
 }

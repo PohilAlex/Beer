@@ -1,5 +1,8 @@
 package com.example.beer.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Oleg on 21.01.14.
  */
@@ -20,6 +23,13 @@ public class BottleTypeFactory {
         bottleType.price = 5;
         bottleType.volume = 0.5;
         return bottleType;
+    }
+
+    public static ArrayList<BottleType> getTypeList() {
+        ArrayList<BottleType> typeList = new ArrayList<BottleType>();
+        typeList.add(createObolonBottle());
+        typeList.add(createBudBottle());
+        return typeList;
     }
 
 }
