@@ -18,4 +18,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         super("com.example.beer", MainActivity.class);
     }
 
+    public void testLoad() {
+
+    }
+
 }

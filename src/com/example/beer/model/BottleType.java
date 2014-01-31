@@ -1,7 +1,7 @@
 package com.example.beer.model;
 
 
-public class Bottle {
+public class BottleType {
     public double volume;
     public double price;
     public String name;
