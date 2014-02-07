@@ -19,7 +19,7 @@ public class JsonParser {
                 JSONObject object = array.getJSONObject(i);
                 type.name = object.getString("Name");
                 type.volume = object.getDouble("Volume");
-                type.price = object.getDouble("Volume");
+                type.price = object.getDouble("Price");
                 types.add(type);
             }
         } catch (JSONException e) {
